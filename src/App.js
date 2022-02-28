@@ -40,7 +40,7 @@ function App() {
 			})
 			.catch(e => {
 				setLoading(false)
-				alert("Internal Server Error")
+				setStatsData({"error": "Internal server error"})
 			})
 	}, [selectedDuration])
 
