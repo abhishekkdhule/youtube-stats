@@ -1,0 +1,33 @@
+.custom-select {
+    width: 120px;
+    border-radius: 180px ;
+    border: 1px solid rgb(221, 221, 221);
+    background-color: white;
+    outline: none;
+    font-size: 12px;
+    padding: 8px 15px;
+}
+
+.custom-rounded {
+    border-radius: 50px;
+}
+
+.graph-container {
+    height: 420px;
+}
+
+.fs-8 {
+    font-size: 8px;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.light-text {
+    color: #9A9A9A;
+}
