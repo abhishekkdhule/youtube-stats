@@ -48,7 +48,7 @@ function App() {
 	return (
 		<>
 			{
-				statsData &&
+				statsData && !statsData.hasOwnProperty('error') &&
 				<>
 					<div className="text-center mt-3 text-dark">
 						<h1>{statsData.metadata.channelName}</h1>
@@ -84,15 +84,15 @@ function App() {
 							<div className="row p-4 m-2 text-center custom-rounded shadow">
 								<div className="col-4">
 									<p className="light-text fs-11 m-1">Subscribers</p>
-									<h5>{statsData.summary.subscribers}M</h5>
+									<h5>{statsData.summary.subscribers}</h5>
 								</div>
 								<div className="col-4">
 									<p className="light-text fs-11 m-1">Views</p>
-									<h5>{statsData.summary.views}K</h5>
+									<h5>{statsData.summary.views}</h5>
 								</div>
 								<div className="col-4">
 									<p className="light-text fs-11 m-1">Revenue</p>
-									<h5>{statsData.summary.revenue}<small>lac</small></h5>
+									<h5>Rs. {statsData.summary.revenue}<small></small></h5>
 								</div>
 							</div>
 

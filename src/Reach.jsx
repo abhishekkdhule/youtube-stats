@@ -18,7 +18,7 @@ function Reach({ durationObj, selectedDuration, reachAndEngagementDetails, loadi
                     loading ? <div className="d-flex justify-content-center align-items-center h-100"><Spinner animation="border" variant="primary" /></div> :
                         <>
                             <p className="light-text fs-12">Views</p>
-                            <h4>{totalViews}k</h4>
+                            <h4>{totalViews}</h4>
                             {
                                 reachAndEngagementDetails.viewsTrend.change.percentage > 0 ?
                                     <p className="fs-10 text-success">+{reachAndEngagementDetails.viewsTrend.change.percentage}%</p>
@@ -36,10 +36,10 @@ function Reach({ durationObj, selectedDuration, reachAndEngagementDetails, loadi
                                 >
 
                                     <XAxis hide={true} dataKey="date" />
-                                    <YAxis unit="k" axisLine={false} dataKey="value1" />
+                                    <YAxis  axisLine={false} dataKey="value1" />
                                     <Tooltip />
                                     <Legend />
-                                    <Line name="Views" unit="k" dot={false} legendType="none" type="monotone" dataKey="value1" stroke="#82ca9d" />
+                                    <Line name="Views"  dot={false} legendType="none" type="monotone" dataKey="value1" stroke="#82ca9d" />
                                 </LineChart>
                             </ResponsiveContainer>
                         </>

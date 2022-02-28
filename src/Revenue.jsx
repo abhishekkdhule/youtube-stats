@@ -19,7 +19,7 @@ function Revenue({ durationObj, selectedDuration, revenueDetails, loading }) {
                     loading ? <div className="d-flex justify-content-center align-items-center h-100"><Spinner animation="border" variant="primary" /></div> : <>
 
                         <p className="light-text fs-12">Estimated Revenue</p>
-                        <h4><small>{estimatedRevenue}lac</small></h4>
+                        <h4>Rs. {estimatedRevenue}</h4>
                         {
                             revenueDetails.estimatedRevenueTrend.change.percentage < 0 ?
 
@@ -37,10 +37,10 @@ function Revenue({ durationObj, selectedDuration, revenueDetails, loading }) {
                             >
 
                                 <XAxis hide={true} dataKey="date" />
-                                <YAxis unit="L" axisLine={false} dataKey="value1" />
+                                <YAxis unit="Rs" axisLine={false} dataKey="value1" />
                                 <Tooltip />
                                 <Legend />
-                                <Line name="Revenue" unit="lac" type="linear" legendType="none" dot={false} dataKey="value1" stroke="#82ca9d" />
+                                <Line name="Revenue" unit="Rs." type="linear" legendType="none" dot={false} dataKey="value1" stroke="#82ca9d" />
                             </LineChart>
                         </ResponsiveContainer>
                     </>
